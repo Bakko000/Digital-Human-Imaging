@@ -27,6 +27,12 @@ from utils_misc import pil_loader, pil_resize_long_edge_to, pil_to_tensor
 </pre>
 
 
+# Esempio
+Disegno di ritratto di Raffaello + Stile di Raffaello nella Maddalena -> Disegno finale
+
+
+
+
 
 # Demo
 
