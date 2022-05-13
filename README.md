@@ -30,7 +30,7 @@ reg_weight = 95
 
 # Esempio di ouput
 Disegno di Raffaello + Stile di Raffaello
-<img src="https://ibb.co/k9FXzP1"/>
+<a href="https://ibb.co/k9FXzP1"><img src="https://i.ibb.co/9VjWBdt/risultatoraffaritratto.png" alt="risultatoraffaritratto" border="0"></a>
 
 
 # Demo
