@@ -23,7 +23,9 @@ from utils_misc import pil_loader, pil_resize_long_edge_to, pil_to_tensor
 
 # Iperparametri modificabili
 <pre>
-
+max_iter = 550 
+content_weight = 0.1
+reg_weight = 95
 </pre>
 
 
