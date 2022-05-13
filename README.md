@@ -37,7 +37,7 @@ Disegno di Raffaello + Stile di Raffaello
 
 # Demo
 
-<a href="https://colab.research.google.com/drive/1E8Wtr8iGeZH-DagAIKppHKsxVxfJDc8k?usp=sharing">Demo</a>   
+<a href="https://colab.research.google.com/drive/1YgZwq7jPIX-_1qN3aGBdiwnr_377IeXh?usp=sharing">Demo</a>   
 Eseguibile e modificabile su Google Colab
 
 
