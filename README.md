@@ -28,6 +28,10 @@ reg_weight = 95
 </pre>
 
 
+# Esempio di ouput
+Disegno di Raffaello + Stile di Raffaello
+<img src="https://ibb.co/k9FXzP1"/>
+
 
 # Demo
 
