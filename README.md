@@ -15,7 +15,6 @@ Il progetto indaga e restituisce la possibilità di concedere vita, ridare anima
 <pre>
 import matplotlib.pyplot as plt
 import numpy as np
-import ipywidgets as widgets
 import torch
 from utils_misc import pil_loader, pil_resize_long_edge_to, pil_to_tensor
 </pre>
@@ -42,7 +41,7 @@ Eseguibile e modificabile su Google Colab
 Il codice appartiene ai seguenti paper
 <ul>
   <li>Deformable Style Transfer. Sunnie S. Y. Kim and Nicholas Kolkin and Jason Salavon and Gregory Shakhnarovich. ECCV 2020  2020. <a href="https://arxiv.org/abs/2003.11038">[paper]</a> <a href="https://github.com/sunniesuhyoung/DST">[code]</a></li>
-  <li>Style Transfer by Relaxed Optimal Transport and Self-Similarity. Nicholas Kolkin, Jason Salavon and Gregory Shakhnarovich. CVPR 2019. [paper] [code]</li>
-  <li>WarpGAN: Automatic Caricature Generation. Yichun Shi, Debayan Deb and Anil K. Jain. CVPR 2019. [paper] [code]</li>
-  <li>Neural Best-Buddies: Sparse Cross-Domain Correspondence. Kfir Aberman, Jing Liao, Mingyi Shi, Dani Lischinski, Baoquan Chen and Daniel Cohen-Or. SIGGRAPH 2018. [paper] [code]</li>
+  <li>Style Transfer by Relaxed Optimal Transport and Self-Similarity. Nicholas Kolkin, Jason Salavon and Gregory Shakhnarovich. CVPR 2019. <a href="https://arxiv.org/abs/1904.12785v2">[paper]</a><a href="https://github.com/nkolkin13/STROTSS">[code]</a></li>
+  <li>WarpGAN: Automatic Caricature Generation. Yichun Shi, Debayan Deb and Anil K. Jain. CVPR 2019. <a href="https://arxiv.org/abs/1811.10100">[paper]</a><a href="https://github.com/seasonSH/WarpGAN">[code]</a></li>
+  <li>Neural Best-Buddies: Sparse Cross-Domain Correspondence. Kfir Aberman, Jing Liao, Mingyi Shi, Dani Lischinski, Baoquan Chen and Daniel Cohen-Or. SIGGRAPH 2018. <a href="https://arxiv.org/abs/1805.04140v2">[paper]</a><a href="https://github.com/kfiraberman/neural_best_buddies">[code]</a></li>
   </ul>
