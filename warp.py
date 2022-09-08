@@ -223,7 +223,7 @@ def solve_interpolation(train_points, train_values, device):
     rhs = torch.cat([f, rhs_zeros], 0)  # [n+d+1, k]
 
     # Then, solve the linear system and unpack the results.
-    w_v, _ = torch.linalg.solve(lhs, rls)
+    w_v, _ = torch.linalg.solve(lhs, rhs)
     w = w_v[:n]
     v = w_v[n:]
 
