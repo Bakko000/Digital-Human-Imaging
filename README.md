@@ -10,8 +10,12 @@ Il progetto indaga e restituisce la possibilità di concedere vita, ridare anima
   <li>pytorch, torchvision, cudatoolkit, numpy, PIL, matplotlib, sklearn</li>
 </ul>
 
+Il servizio web è reso possibile da Flask
+
 <b>Update 21/09/2022</b> sono stati rilevati problemi di incompatibilità con nuove versioni di pytorch (>1.9) al momento si consiglia di installare pytorch 1.9 con le librerie consigliate di riferimento:
 <a href='https://pytorch.org/get-started/previous-versions/'>vedere qui per una lista completa</a>
+
+Comunque la Demo ed il Servizio Web sono stati aggiornati.
 
 
 
