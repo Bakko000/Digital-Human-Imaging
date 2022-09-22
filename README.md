@@ -10,7 +10,7 @@ Il progetto indaga e restituisce la possibilità di concedere vita, ridare anima
   <li>pytorch, torchvision, cudatoolkit, numpy, PIL, matplotlib, sklearn</li>
 </ul>
 
-Il servizio web è reso possibile da Flask e un ambiente virtuale da ritrovarsi anche nelle varie path: <pre>venv</pre>
+Il servizio web è reso possibile da Flask e un ambiente virtuale da ritrovarsi anche nelle varie path: <b>venv</b>
 
 
 <pre>
