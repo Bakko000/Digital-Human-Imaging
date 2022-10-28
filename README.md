@@ -29,9 +29,9 @@ Comunque la Demo ed il Servizio Web sono stati aggiornati.
 
 # Iperparametri modificabili
 <pre>
-max_iter = 550 
 content_weight = 8
-reg_weight = 95
+reg_weight = 500
+warp_weight = 0.1
 </pre>
 
 
