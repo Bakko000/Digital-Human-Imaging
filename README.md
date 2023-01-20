@@ -1,16 +1,16 @@
 # Digital Human Imaging
 
+Questo progetto di tesi ha lo scopo di esplorare criticamente le moderne tecniche di Deep Learning, nel particolare del Neural Style Transfer  (NST), applicate ai disegni e alle opere appartenenti ai maggiori artisti.
+L’obbiettivo finale consiste nella creazione di un servizio web che permetta agli utenti di estrarre la base cromatica da un’opera finita e trasferirla in un disegno (dello stesso artista o meno), con lo scopo di identificare le analogie e le differenze tra esso ed il dipinto tramite confronto. La colorazione del disegno può rivelare infatti i dettagli più sfuggenti e sbiaditi che possono inizialmente sfuggire. Inoltre, i colori facilitano l’identificazione dei punti in comune o meno. A tal fine, una volta stabilito il modello di NST più adatto, è stato realizzato il sito web che lo implementa, concedendo all’utente la possibilità di personalizzare i principali parametri che influiscono sul risultato finale.
 
-Nella disciplina dell'arte sono tanti i disegni lasciati dai maggiori artisti, molti di questi sono esperimenti singoli, altri veri e propri studi o idee originarie sulla realizzazione di una prossima opera.
-Il progetto indaga e concede la possibilità di concedere vita, ridare anima a queste “carte” all’apparenza inermi, trasferendoci uno stile a scelta dell'utente.
 
 # Requisiti e imports
 <ul>
-  <li>Python 3</li>
+  <li>Python 3.x</li>
   <li>pytorch, torchvision, cudatoolkit, numpy, PIL, matplotlib, sklearn</li>
 </ul>
 
-Il servizio web è reso possibile da Flask e un ambiente virtuale da ritrovarsi anche nelle varie path: <b>venv</b>
+Il servizio web è reso possibile da Flask e un ambiente virtuale: <b>venv</b>
 
 
 <pre>
@@ -24,7 +24,7 @@ from utils_misc import pil_loader, pil_resize_long_edge_to, pil_to_tensor
 <b>Update 21/09/2022</b> sono stati rilevati problemi di incompatibilità con nuove versioni di pytorch (>1.9) al momento si consiglia di installare pytorch 1.9 con le librerie consigliate di riferimento:
 <a href='https://pytorch.org/get-started/previous-versions/'>vedere qui per una lista completa</a>
 
-Comunque la Demo ed il Servizio Web sono stati aggiornati.
+Comunque la Demo ed il servizio web sono stati aggiornati.
 
 
 # Iperparametri modificabili
@@ -51,7 +51,7 @@ Eseguibile e modificabile su Google Colab
 
 
 # Ringraziamenti
-Il codice appartiene ai seguenti paper
+Parti del codice appartengono ai seguenti paper
 <ul>
   <li>Deformable Style Transfer. Sunnie S. Y. Kim and Nicholas Kolkin and Jason Salavon and Gregory Shakhnarovich. ECCV 2020  2020. <a href="https://arxiv.org/abs/2003.11038">[paper]</a> <a href="https://github.com/sunniesuhyoung/DST">[code]</a></li>
   <li>Style Transfer by Relaxed Optimal Transport and Self-Similarity. Nicholas Kolkin, Jason Salavon and Gregory Shakhnarovich. CVPR 2019. <a href="https://arxiv.org/abs/1904.12785v2">[paper]</a><a href="https://github.com/nkolkin13/STROTSS">[code]</a></li>
