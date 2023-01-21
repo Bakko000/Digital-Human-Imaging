@@ -1,7 +1,6 @@
 # Digital Human Imaging
 
-Questo progetto di tesi ha lo scopo di esplorare criticamente le moderne tecniche di Deep Learning, nel particolare del Neural Style Transfer  (NST), applicate ai disegni e alle opere appartenenti ai maggiori artisti.
-L’obbiettivo finale consiste nella creazione di un servizio web che permetta agli utenti di estrarre la base cromatica da un’opera finita e trasferirla in un disegno (dello stesso artista o meno), con lo scopo di identificare le analogie e le differenze tra esso ed il dipinto tramite confronto. La colorazione del disegno può rivelare infatti i dettagli più sfuggenti e sbiaditi che possono inizialmente sfuggire. Inoltre, i colori facilitano l’identificazione dei punti in comune o meno. A tal fine, una volta stabilito il modello di NST più adatto, è stato realizzato il sito web che lo implementa, concedendo all’utente la possibilità di personalizzare i principali parametri che influiscono sul risultato finale.
+Questo progetto di tesi ha lo scopo di creare un servizio web che permetta agli utenti di estrarre la base cromatica da un’opera finita e trasferirla in un disegno (dello stesso artista o meno), con lo scopo di identificare le analogie e le differenze tra esso ed il dipinto tramite confronto. La colorazione del disegno può rivelare infatti i dettagli più sfuggenti e sbiaditi che possono inizialmente sfuggire. Inoltre, i colori facilitano l’identificazione dei punti in comune o meno. A tal fine, una volta stabilito il modello di Neural Style Transfer più adatto, è stato realizzato il sito web che lo implementa, concedendo all’utente la possibilità di personalizzare i principali parametri che influiscono sul risultato finale.
 
 
 # Requisiti e imports
