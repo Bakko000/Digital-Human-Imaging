@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Digital Human Imaging - Art & AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+
+
+
+<!-- Logo 
+<a href="/index"><img id="logoph" src="images/Logo-PK-30.png" alt="Digital Human Imaging - Arte e IA"></a> -->
+
+<!-- Menù di Navigazione -->
+
+<header>
+<nav class="menu">
+    <ul>
+        <li>
+            <a href="/">Home</a>
+            <a href="/comefunziona">Come funziona</a>
+            <a href="/casi">Casi d'uso</a>
+        </li>
+    </ul>
+</nav>
+</header>
+<div id="container">
+<br />
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>  <!-- test -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script>
+  
+function NST_clickevent(){
+
+  const iter = $("#iter").val();
+  const content_w = $("#cweight").val();
+  const reg_w = $("#rweight").val();
+
+  if(iter!="" && iter!=0 && content_w!="" && content_w!=0 && reg_w!="" && reg_w!=0) {
+
+  $.ajax({
+          url:"/nst",
+          context: document.body
+      });
+  } else {
+    alert("Compila tutti i campi prima di avviare l'algoritmo.");
+  }
+}
+
+async function AJAXUpload(input, path){
+  let formData = new FormData();
+  let response;
+  let wait = path;
+  formData.append("file", input.files[0]);
+  try {
+  response = await fetch(wait, {
+    method: "POST", 
+    body: formData
+  });
+  if(response.status != 400 && response.status != 413) {    // Controlla estensione scorretta o dimensione eccessiva
+  alert('Il file è stato caricato correttamente.');
+ } else {
+  alert("Ops! Qualcosa è andato storto. Controlla l'estensione e/o la dimensione del file caricato.")
+ }
+} catch(e) {
+  console.log(e);
+  }  
+}
+
+
+function bridge() {
+
+const iter = $("#iter").val();
+const content_w = $("#cweight").val();
+const reg_w = $("#rweight").val();
+
+
+if(iter!="" && iter!=0 && content_w!="" && content_w!=0 && reg_w!="" && reg_w!=0) {
+
+  const dict_values = {iter, content_w, reg_w} //Pass the javascript variables to a dictionary.
+  const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
+
+  $.ajax({
+      url:"/send",
+      type:"POST",
+      contentType: "application/json",
+      data: JSON.stringify(s)});
+
+    } else {
+    alert("Compila tutti i campi prima di proseguire");
+  }
+}
+
+$(function(){
+
+$('#myButton').click(()=>{
+
+  let imgUrl = $('#imgUrl').val();
+
+  $.get(imgUrl)
+    .done(() => {
+      $("img").not(".pg").attr('class', "view");
+      $('.view').attr('src', imgUrl);   
+      $('#imgText').text('');
+    })
+    .fail(() => {
+      $('#imgText').text('Il file non è ancora pronto. Riprova fra qualche minuto.');
+      $('img.view').attr('src', '');
+    });
+  });
+  maxiter_config = {
+        min: 550,
+        max: 1000,
+        step: 50,
+        slide: function( event, ui ) {
+            // Set the real value into the inputs
+            $('#iter').val(ui.value);
+        }
+};
+contentweight_config = {
+        min: 0,
+        max: 100,
+        step: 1,
+        slide: function( event, ui ) {
+            // Set the real value into the inputs
+            $('#cweight').val(ui.value);
+        }
+};
+regweight_config = {
+        min: 50,
+        max: 1000,
+        step: 5,
+        slide: function( event, ui ) {
+            // Set the real value into the inputs
+            $('#rweight').val(ui.value);
+        }
+};
+
+  $( "#max_iter" ).slider(maxiter_config);
+  $( "#content_weight" ).slider(contentweight_config);
+  $( "#reg_weight" ).slider(regweight_config);
+  
+})
+</script>
+
+<div id="logo_pg"><img class="pg" src="{{url_for('static', filename='artai.png')}}" align="middle" style="border-radius: 5px; width: 30%; left: 33%; position: relative"/></div>
+<div class="intropg">
+
+  
+  Questo sito utilizza un algoritmo di Intelligenza Artificiale che permette di estrarre la base cromatica da un’opera finita e trasferirla in un disegno (dello stesso artista o meno), allo scopo di identificare le analogie e le differenze tra esso ed il dipinto tramite confronto. La colorazione del disegno può rivelare infatti i dettagli più sfuggenti e sbiaditi che possono inizialmente sfuggire. Inoltre, i colori facilitano l’identificazione dei punti in comune o meno.
+  <p>In questa pagina in particolare (Home) è possibile caricare due immagini di valenza artistica, ed ottenere il risultato che rappresenta una sovrapposizione fra le due.</p>
+  Nella pagina "Come funziona" è invece possibile approfondire alcuni dettagli sul background dell'algoritmo.
+  <p>Infine, nella pagina "Casi d'uso" sono presentati alcuni dei principali casi di studio affrontati.</p>
+
+  <p>I passaggi da seguire per ottenere il proprio risultato personalizzato sono illustrati di seguito. (i campi sono tutti obbligatori)</p>
+
+</div>
+
+<div class="flexbox">
+   <div>
+    <h2>I. Carica l'immagine iniziale a cui vuoi trasferire uno stile (solo formato jpg o jpeg)</h2>
+  <input id="contentupload" type="file" name="contentupload" /> 
+  <button id="upload-button" onclick="AJAXUpload(contentupload, '/content')">Carica</button>
+
+    </div>
+    <div>
+    <h2>II. Carica l'immagine dalla quale vuoi estrarre lo stile da passare ad <i>I </i> (solo formato jpg o jpeg)</h2>
+    <input id="styleupload" type="file" name="styleupload" />
+    <button id="upload-button" onclick="AJAXUpload(styleupload, '/style')">Carica</button>
+    </div>
+  </br>
+  </br>
+</br>
+</div>
+<div class="flexbox">
+  <div>
+<h2>III. Gestisci e personalizza una serie di parametri (i valori consigliati sono suggeriti in ogni inputbox)</h2>
+    <p>Numero di iterazioni</p>
+    <div id="max_iter"></div>
+    <input type="text" id="iter" placeholder="550"/>
+    <p>Content Weight:</p>
+    <div id="content_weight"></div>
+    <input type="text" id="cweight" placeholder="8" />
+    <p>Style Weight:</p>
+    <div id="reg_weight"></div>
+    <input type="text" id="rweight" placeholder="95"/>
+    <br />
+    <br />
+
+<button type="submit" onclick='bridge();'>Conferma le scelte</button>
+</div>
+<div>
+<p><h2>IV. Avvia la rete neurale per ottenere il tuo risultato</h2></p>
+<button type="submit" onclick='NST_clickevent()'>Avvia l'algoritmo</button>
+</div>
+</div>
+<br />
+<br />
+<h2>IV. Infine, visualizza e confronta il risultato ottenuto</h2>
+Immagine: <input type="text" id="imgUrl" value="http://localhost:5000/static/example/DSTresults/sequenza.png?no-cache"><br>
+    <br />
+    <button id="myButton" type="button">Clicca qui per visualizzare</button>
+    
+    <div id="imgText"></div>             
+
+
+    <img>
+    </div>
+  </body>
+</html>

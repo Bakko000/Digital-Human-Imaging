@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Digital Human Imaging - Art & AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <!-- Logo 
+<a href="/index"><img id="logoph" src="images/Logo-PK-30.png" alt="Digital Human Imaging - Arte e IA"></a> -->
+
+<!-- Menù di Navigazione -->
+
+<header>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+                <a href="/comefunziona">Come funziona</a>
+                <a href="/casi">Casi d'uso</a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+    <div id="container">
+    <div id="logo_pg"><img src="{{url_for('static', filename='dl.jpg')}}" align="middle" style="border-radius: 5px; width: 30%; left: 33%; position: relative"/></div>
+    <div class="intropg">
+        Le immagini prodotte da questo sito, sono create da un modello di <b>Computer Vision</b> basato sul <b>Deep Learning</b>.
+        Con il termine «Computer Vision» (Visione Artificiale) si intendono tutte le rappresentazioni visive elaborate e mostrate da e per la macchina, attraverso l’impiego di determinati algoritmi o strumentazioni idonee.
+        Un modello di Deep Learning (DL), è in grado di imparare determinati pattern attraverso più livelli/layers (per questo Deep) di apprendimento.
+        <p>Esso viene sottoposto a una grande quantità di dati, che mano a mano tramite il passaggio attraverso i diversi livelli, vengono filtrati e, in ultima istanza, appresi.
+        Si può pensare ad ogni strato come una «purificazione» più profonda dei dati inseriti in input, i dati iniziali vengono quindi mano a mano scomposti e diventano più informativi per la <b>rete</b> (in questo contesto, l’insieme degli strati del modello).</p> Quest’ultima, viene quindi «educata» affinché possa riconoscere nuovi dati e sia in grado di categorizzarli correttamente. Un esempio di un compito simile, potrebbe essere avere una batteria di immagini, e voler assegnare ad ognuna l’etichetta (label) corrispondente: «happy» e «bad» a seconda del contenuto in essa mostrato (Chollet, 2017).
+        Proprio questa suddivisione in layers gerarchici fa sì che il modello di DL sia più che mai adatto al contesto della Computer Vision, poiché il «mondo visivo»  è spazialmente gerarchico, ovvero una certa immagine è composta da più pezzi che la definiscono. Questo è ciò che succede all’interno di una <b>rete neurale convoluzionale</b>, un particolare tipo di architettura per i modelli di DL di Computer Vision. 
+        <p>Le immagini fornite in input in una rete di questo tipo, vengono infatti «scansionate» tramite dei filtri presenti nei vari layers (layers di convoluzione, per questo si parla di rete convoluzionale), ed ognuno di essi cerca una certa caratteristica nell’input, trasforma il risultato, lo passa al prossimo filtro, e così via. Pensando ad alto livello, un filtro potrebbe indicare per esempio l’intensità del colore rosso nell’immagine. 
+
+        Tutte le caratteristiche cercate ed incontrate dai filtri durante questo processo, sono chiamate features e fanno parte della feature map che ogni filtro produce. Ogni feature map contiene quindi tutte le risposte (le attivazioni) delle features rispetto un determinato filtro (Chollet, 2017).</p>
+        Ogni layer racchiuderà perciò un certo output intermedio con un determinato insieme di feature map, per esempio potrebbe contenere tutte le caratteristiche di una certa parte dell’immagine, come quella sinistra, oppure solamente i colori rosso e verde presenti nelle varie zone dell’immagine,  etc. 
+        L’idea del <b>Neural Style Transfer</b>, oggetto nel prossimo riquadro, consiste proprio nell’accedere e sfruttare questi output intermedi, per quanto riguarda l’immagine iniziale e quella di stile, e nel frattempo controllare come si stia sviluppando l’immagine finale che dovrà essere la fusione delle due.
+
+
+    </div>
+    <div class="flexbox">
+    <div class="fleximg"><img src="{{url_for('static', filename='Immagine1.png')}}" align="middle" /></div>
+    <div id="desc"><p>Il Neural Style Transfer (in italiano: Trasferimento Neurale dello Stile) è stato introdotto inizialmente da Gatys et al. (2015).
+        L’idea di base è che a partire da un’immagine iniziale, è possibile, attraverso una rete neurale convoluzionale, ottenere una nuova immagine avente come contenuto l’immagine originale (che chiameremo «content image», immagine di contenuto) e come stile  quello estratto dalla «style image».</p>
+
+ <p>L’algoritmo si corregge automaticamente quando sta producendo un’immagine che si discosta dalla «fusione» ottimale (calcolata tramite funzioni matematiche di loss) ed è quindi in grado di ottenere alla fine un risultato soddisfacente, cioè la «stylized image».</p>
+
+
+<p>A fianco, viene proposto il caso affrontato da Gatys: una foto di Tubingen a cui viene passato lo stile di Van Gogh in Starry Night.</p>
+
+ </div>
+    <br />
+    <br />
+    </div>
+    <div class="flexbox">
+    <div class="fleximg"><img src="{{url_for('static', filename='risultatodst.png')}}" align="middle" /></div>
+    <div id="desc">Il Deformable Style Transfer (DST) opera anch'esso su trasferimenti di stile basandosi sull’idea di Gatys et al, tuttavia aggiunge l’attenzione anche all’aspetto geometrico. Infatti, i metodi basati sull'idea di Gatys, si concentrano principalmente su texture e colori, ignorando quasi completamente la geometria.
+    <p>Nonostante tali algoritmi funzionino a dovere per fotografie, immagini semplici e stili artistici astratti (impressionismo come visto sopra, etc), se si tratta di prendere in considerazione la concreta rappresentazione della realtà e soprattutto figure umane, sono soggetti a errori. Quello che manca a questi algoritmi è infatti l'attenzione all’aspetto geometrico-spaziale.
+    L'approccio proposto con il DST consiste proprio nello «stilizzare»  (= trasferire stile)  sia nelle texture che nella geometria di un'immagine, per adattarsi meglio a un'immagine di stile. (Kim et al, 2020).</p>
+    A fianco, si propone un risultato affrontato dagli autori dell'algoritmo. Il risultato è interessante perchè testimonia l'attenzione del DST a trasferire i colori tenendo conto dei contorni presenti e della struttura geometrica delle immagini.
+
+</div>
+    </div>
+    </body>

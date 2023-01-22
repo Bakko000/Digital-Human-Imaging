@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Digital Human Imaging - Art & AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <!-- Logo 
+<a href="/index"><img id="logoph" src="images/Logo-PK-30.png" alt="Digital Human Imaging - Arte e IA"></a> -->
+
+<!-- Menù di Navigazione -->
+
+<header>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+                <a href="/comefunziona">Come funziona</a>
+                <a href="/casi">Casi d'uso</a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+    <div id="container">
+        <div id="logo_pg"><img src="{{url_for('static', filename='d06.jpg')}}" align="middle" style="border-radius: 5px; width: 30%; left: 33%; position: relative"/>
+    <div class="intropg">
+        In questa pagina è possibile visualizzare i principali casi di studio prodotti con l'algoritmo del sito su Raffaello e Leonardo.</p>
+        <p>Nel primo riquadro si presenta una sovrapposizione tra il dipinto di Raffaello <a href="https://it.wikipedia.org/wiki/Dama_col_liocorno">"Dama col liocorno"</a> ed il <a href="https://it.wikipedia.org/wiki/File:Studio_per_la_dama_col_liocorno,_louvre.jpg">disegno preparatorio;</a></p>
+        <p>Nel secondo riquadro viene illustrata una sovrapposizione tra la <a href="https://it.wikipedia.org/wiki/Gioconda">"Gioconda"</a> di Leonardo e la <a href="https://it.wikipedia.org/wiki/Dama_col_liocorno">"Dama con il liocorno"</a> di Raffaello;</p>
+        <p>Nel terzo riquadro viene proposta una sovrapposizione tra due artisti di periodi differenti, il <a href="https://it.wikipedia.org/wiki/Ritratto_di_giovane_dama">dipinto del Pollaiolo (del 400 ca)</a> e il <a href="https://it.wikipedia.org/wiki/File:Studio_per_la_dama_col_liocorno,_louvre.jpg">disegno di Raffaello (500 ca)</a></p>
+    </div>
+    <div class="flexbox">
+    <div class="fleximg"><img src="{{url_for('static', filename='resultliocorno.png')}}" align="middle" /></div>
+    <div id="desc">Come si può vedere dal confronto tra la sovrapposizione (a dx) ed il dipinto finito (al centro), emerge che Raffaello aveva già scelto come rappresentare le colonnine e le proporzioni dello sfondo, lasciati fondamentalmente invariati nel dipinto finito. Tuttavia, l’artista sceglie di rimuovere le costruzioni e l’arbusto nell’opera finale, presenti invece sul fondo del disegno iniziale.  La differenza importante con il disegno preparatorio è che la donna non tiene alcun animale ma presenta le braccia incrociate sul busto in primo piano.
+    <p>Inoltre, dal disegno si evince un fortissimo rapporto con la «Gioconda» di Leonardo.</p>
+
+ </div>
+    <br />
+    <br />
+    </div>
+    <div class="flexbox">
+    <div class="fleximg"><img src="{{url_for('static', filename='resultgioconda.png')}}" align="middle" /></div>
+    <div id="desc">Dal confronto fra il risultato finale (a dx) ed il dipinto di Leonardo, si dimostra la presenza di interessanti analogie. Infatti, la posizione a mezzo busto sembra interamente ripresa dalla «Gioconda»  di Leonardo, così come la posizione delle mani e delle braccia, e la loro struttura.
+        <p>Particolare attenzione merita inoltre la mano del braccio destro, che sembra essere particolarmente ispirata da quella presente nella «Gioconda», anche per quanto riguarda le dita.</p>
+</div>
+<br />
+    <br />
+    </div>
+    <div class="flexbox">
+    <div class="fleximg"><img src="{{url_for('static', filename='risultatoraffaepollaiolo.png')}}" align="middle" /></div>
+    <div id="desc">Confrontando il risultato della sovrapposizione con il dipinto del Pollaiolo, si dimostrano le rispettive analogie, ma anche le differenze. Raffaello ha effettivamente guardato al Pollaiolo, la zona occhi sembra essere ispirata al dipinto, così come il sopracciglio che emerge con più chiarezza dalla colorazione del disegno. Raffaello rappresenta tuttavia un naso più lungo ed un mento non appuntito e poco evidente.
+        <p>Infine, la posizione della testa è realizzata in modo diverso dai due pittori, il Sanzio sceglie di inclinarla leggermente verso il basso, mentre il Pollaiolo la rappresenta più dritta concedendo anche un atteggiamento più fiero al volto. </p>
+</div>
+    </div>
+<br />
+    <br />
+    
+    <div class="flexbox">
+    <div class="fleximg"><img src="{{url_for('static', filename='dst5.png')}}" align="middle" /></div>
+    <div id="desc">
+Il caso di studio presentato di fianco è molto delicato e riguarda il disegno preparatorio di Isabella d’Este e l’opera ritrovata recentemente in Svizzera.  Il disegno, conservato al Louvre, è indubbiamente di Leonardo ma per quanto riguarda la realizzazione finale la critica è tutt’ora divisa. Generalmente però si concorda sul fatto che alcuni elementi come il ramo di palma non siano stati realizzati da Leonardo, ma siano aggiunte successive.
+<p>Assumendo e schierandoci dalla parte di chi dice che una buona parte del dipinto sia di Leonardo, l’algoritmo può riprodurre digitalmente il disegno originale con la base cromatica del dipinto svizzero, evitando di riproporre il rametto.</p>
+
+</div>
+    </div>
+        </div>
+    </body>
