@@ -20,7 +20,8 @@ py -3 -m venv venv ::Viene creata la cartella che conterrà l’ambiente
 venv\Scripts\activate  ::Attiva l’ambiente virtuale
 pip install flask    ::Installazione del framework Flask
 </pre>
-
+  
+A questo punto tutto il codice del repository va caricato in <pre>myproject\venv</pre>
 
 <b>Update 21/09/2022</b> sono stati rilevati problemi di incompatibilità con nuove versioni di pytorch (>1.9) al momento si consiglia di installare pytorch 1.9 con le librerie consigliate di riferimento:
 <a href='https://pytorch.org/get-started/previous-versions/'>vedere qui per una lista completa</a>
@@ -35,6 +36,21 @@ reg_weight = 500
 warp_weight = 0.1
 </pre>
 
+
+# Avvio del servizio web
+Da root\myproject digitare <b>(con ambiente virtuale precedentemente attivato)</b>:
+
+<pre>
+flask --app dighum run
+</pre>
+
+Si mostrerà un link di questo tipo:
+
+<pre>
+* Running on http://127.0.0.1:5000
+</pre>
+
+Cliccarci ed aprire sul browser.
 
 # Esempio di ouput
 Disegno di Raffaello + Stile di Raffaello
