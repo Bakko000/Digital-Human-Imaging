@@ -33,7 +33,7 @@ Comunque la Demo ed il servizio web sono stati aggiornati.
 <pre>
 content_weight = 8
 reg_weight = 500
-warp_weight = 0.1
+max_iter = 350
 </pre>
 
 
