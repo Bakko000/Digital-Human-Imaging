@@ -57,6 +57,7 @@ Cliccarci ed aprire sul browser.
 # Esempio di ouput
 Disegno di Raffaello + Opera di Raffaello
 
+(presente anche inizialmente di default in pre>static/example/DSTresults/sequenza.png</pre>)
 
 <img src="https://i.ibb.co/RYCF9c8/Screenshot-20230123-201609.png" alt="risultatoraffa" border="0">
 
