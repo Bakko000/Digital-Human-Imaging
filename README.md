@@ -13,10 +13,12 @@ Il servizio web è reso possibile da Flask e un ambiente virtuale: <b>venv</b>
 
 
 <pre>
-import matplotlib.pyplot as plt
-import numpy as np
-import torch
-from utils_misc import pil_loader, pil_resize_long_edge_to, pil_to_tensor
+mkdir myproject   ::Viene creata la cartella per il progetto
+cd myproject  
+py -3 -m venv venv ::Viene creata la cartella che conterrà l’ambiente
+                                                            ::virtuale
+venv\Scripts\activate  ::Attiva l’ambiente virtuale
+pip install flask    ::Installazione del framework Flask
 </pre>
 
 
