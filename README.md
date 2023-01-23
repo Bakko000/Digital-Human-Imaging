@@ -17,7 +17,7 @@ mkdir myproject   ::Viene creata la cartella per il progetto
 cd myproject  
 py -3 -m venv venv ::Viene creata la cartella che conterrà l’ambiente
                                                             ::virtuale
-venv\Scripts\activate  ::Attiva l’ambiente virtuale
+venv/Scripts/activate  ::Attiva l’ambiente virtuale
 pip install flask    ::Installazione del framework Flask
 </pre>
   
