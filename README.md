@@ -52,12 +52,15 @@ Si mostrerà un link di questo tipo:
 
 Cliccarci ed aprire sul browser.
 
+
+
 # Esempio di ouput
-Disegno di Raffaello + Stile di Raffaello
+Disegno di Raffaello + Opera di Raffaello
 
 
-<a href="https://ibb.co/k9FXzP1"><img src="https://i.ibb.co/9VjWBdt/risultatoraffaritratto.png" alt="risultatoraffaritratto" border="0"></a>
+<a href="https://i.ibb.co/RYCF9c8/Screenshot-20230123-201609.png" alt="risultatoraffa" border="0"></a>
 
+Grazie alla colorazione del disegno, si può notare meglio le proporzioni di colonnine e fondo, concludendo che l'artista aveva già pensato come realizzarli nella bozza e non ne ha cambiato la struttura nel dipinto finale. Vengono inoltre evidenziati le costruzioni ed il piccolo arbusto sempre sul fondo, che tuttavia non sono presenti nel dipinto finale.
 
 # Demo
 
