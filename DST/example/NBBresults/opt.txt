@@ -1,0 +1,21 @@
+------------ Options -------------
+batchSize: 1
+beta1: 0.5
+border_size: 7
+convergence_threshold: 0.001
+datarootA: C:\Users\corra\myproject\venv\DST\example\content.jpg
+datarootB: C:\Users\corra\myproject\venv\DST\example\style.jpg
+fast: True
+gamma: 1
+gpu_ids: []
+imageSize: 256
+input_nc: 3
+k_final: 10
+k_per_level: inf
+lr: 0.05
+name: experiment_name
+niter_decay: 100
+results_dir: venv/DST/example/NBBresults
+save_path: None
+tau: 0.05
+-------------- End ----------------
